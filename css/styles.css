@@ -88,6 +88,10 @@ address {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer; /* Стан курсору при наведенні (C13) */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавний перехід*/
+  .hero-button:hover,
+  .hero-button:focus {
+  background-color: #404bbf; /* Темніший синій (Ocean) */
 }
 
 /* --- Секція: Features (Переваги) --- */
