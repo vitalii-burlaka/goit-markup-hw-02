@@ -1,14 +1,13 @@
-/* --- ЗАГАЛЬНІ СТИЛІ --- */
+/* --- Глобальні стилі та типографіка (C5, C6, C8) --- */
 
 body {
-  /* C5, C6: Шрифт Roboto як основний + sans-serif */
   font-family: "Roboto", sans-serif;
-  /* C8, C11: Домінантний колір тексту та фону */
   color: #434455;
   background-color: #ffffff;
+  line-height: 1.5; /* Базова висота рядка для всього контенту */
 }
 
-/* Скидання дефолтних маркерів (B8) та підкреслень (C14) */
+/* Скидання дефолтних властивостей списків та посилань */
 ul {
   list-style-type: none;
   margin: 0;
@@ -19,14 +18,18 @@ a {
   text-decoration: none;
 }
 
-/* --- ХЕДЕР (HEADER) --- */
+/* Скидання стилю накреслення для контактної секції */
+address {
+  font-style: normal;
+}
+
+/* --- Секція: Header (Логотип та навігація) --- */
 
 .logo {
-  /* B10, C12: Шрифт Raleway Bold для лого */
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.17; /* C10: line-height як множник */
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -36,31 +39,33 @@ a {
   color: #2e2f42;
 }
 
-/* C3, C4: Інтерактивні стани для контактів та навігації */
-.nav-link,
+.nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+/* Інтерактивні стани елементів навігації (C3) */
+.nav-link:hover,
+.nav-link:focus {
+  color: #404bbf;
+}
+
 .contact-link {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-.nav-link {
-  font-weight: 500;
-  color: #2e2f42;
-}
-
-.contact-link {
   color: #434455;
 }
 
-.nav-link:hover,
-.nav-link:focus,
 .contact-link:hover,
 .contact-link:focus {
-  color: #404bbf; /* Активний стан за Style Guide */
+  color: #404bbf;
 }
 
-/* --- ГЕРОЙ (HERO) --- */
+/* --- Секція: Hero (Головний екран) --- */
 
 .hero {
   background-color: #2e2f42;
@@ -82,22 +87,17 @@ a {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  /* C13: Курсор-вказівник для кнопок */
-  cursor: pointer;
+  cursor: pointer; /* Стан курсору при наведенні (C13) */
 }
 
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404bbf;
-}
+/* --- Секція: Features (Переваги) --- */
 
-/* --- ПЕРЕВАГИ (FEATURES) --- */
-
-/* C15: Заголовок поки що видимий */
 .features-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #2e2f42;
 }
 
@@ -105,19 +105,31 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
   color: #2e2f42;
 }
 
-/* --- КОМАНДА (TEAM) --- */
+.features-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+/* --- Секція: Team (Команда) --- */
 
 .team {
-  background-color: #f4f4fd; /* Колір Cloud */
+  background-color: #f4f4fd;
 }
 
 .team-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #2e2f42;
 }
 
@@ -125,12 +137,32 @@ a {
   background-color: #ffffff;
 }
 
-/* --- ПОРТФОЛІО (PORTFOLIO) --- */
+.team-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.team-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #434455;
+}
+
+/* --- Секція: Portfolio (Портфоліо) --- */
 
 .portfolio-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #2e2f42;
 }
 
@@ -138,10 +170,19 @@ a {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #2e2f42;
 }
 
-/* --- ФУТЕР (FOOTER) --- */
+.portfolio-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+/* --- Секція: Footer (Підвал) --- */
 
 .footer {
   background-color: #2e2f42;
@@ -152,6 +193,9 @@ a {
 }
 
 .footer-text {
-  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
 }
